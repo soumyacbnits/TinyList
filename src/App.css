@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+}
+.customLoader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+}
+
+.taskUncheckAnimation {
+    z-index: 9;
+    width: 100%;
+    animation-name: myReverse;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+
+.taskCheckAnimation{
+    z-index: 9;
+    width: 100%;
+    animation-name: animationSlide;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animationSlide {
+    0%   {position: relative; bottom: 0px;}
+    100% {position: absolute; bottom: -50px;}
+}
